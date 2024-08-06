@@ -1,8 +1,6 @@
-print 'Setting leader keys'
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-print 'Setting keymap'
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 -- [[ Basic Keymaps ]]
