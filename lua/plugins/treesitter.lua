@@ -12,6 +12,10 @@ return {
       auto_install = true,
       ignore_install = {},
       modules = {},
+      context = { enable = true },
     }
   end,
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter-context',
+  },
 }
