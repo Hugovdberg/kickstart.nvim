@@ -65,3 +65,5 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
+
+vim.opt.shell = 'pwsh.exe'
