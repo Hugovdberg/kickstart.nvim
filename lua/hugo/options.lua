@@ -83,3 +83,5 @@ vim.o.confirm = true
 vim.o.smartindent = true
 
 vim.o.wrap = false
+
+vim.o.shell = 'pwsh.exe'
