@@ -138,9 +138,7 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         ruff = {},
-        pyright = {
-          cmd = { 'pyright.exe' },
-        },
+        -- pyright = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -188,6 +186,7 @@ return {
         },
       }
       require('lspconfig').ruff.setup { init_options = { settings = {} } }
+      -- require('lspconfig').pyright.setup { cmd = { 'pyright-langserver.exe', '--stdio' } }
     end,
   },
 }
