@@ -41,3 +41,6 @@ set('n', '<M-.>', '<C-w>5>', { desc = 'Move split right' })
 set('n', '<M-,>', '<C-w>5<', { desc = 'Move split left' })
 set('n', '<M-t>', '<C-w>+', { desc = 'Move split up (taller)' })
 set('n', '<M-s>', '<C-w>-', { desc = 'Move split down (shorter)' })
+
+-- Simplify rerun command
+set('n', '<leader>.', '@:<CR>', { desc = 'Repeat last command' })
