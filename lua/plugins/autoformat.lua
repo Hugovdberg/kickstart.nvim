@@ -29,9 +29,18 @@ return { -- Autoformat
       -- Conform can also run multiple formatters sequentially
       python = { 'ruff_fix', 'ruff_format', 'ruff_organize_imports' },
       toml = { 'taplo' },
+      snakemake = { 'snakefmt' },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
+    },
+    formatters = {
+      snakefmt = {
+        command = 'snakefmt',
+        timeout_ms = 5000,
+        -- args = { '-' },
+        -- root_patterns = { 'Snakefile', '.*\\.rules' },
+      },
     },
   },
 }
