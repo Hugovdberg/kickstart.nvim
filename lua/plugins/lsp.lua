@@ -19,7 +19,7 @@ return {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.
       -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-      { 'mason-org/mason.nvim', opts = {PATH = 'append' } },
+      { 'mason-org/mason.nvim', opts = { PATH = 'append' } },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -228,12 +228,12 @@ return {
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
+            vim.lsp.config(server_name, server)
           end,
         },
       }
-      require('lspconfig').ruff.setup { init_options = { settings = {} } }
-      -- require('lspconfig').pyright.setup { cmd = { 'pyright-langserver.exe', '--stdio' } }
+      vim.lsp.config('ruff', { init_options = { settings = {} } })
+      -- vim.lsp.config('pyright', { cmd = { 'pyright-langserver.exe', '--stdio' } })
     end,
   },
 }

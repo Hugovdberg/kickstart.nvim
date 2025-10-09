@@ -6,8 +6,8 @@ vim.g.have_nerd_font = true
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-    vim.o.clipboard = 'unnamedplus'
-  end)
+  vim.o.clipboard = 'unnamedplus'
+end)
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
